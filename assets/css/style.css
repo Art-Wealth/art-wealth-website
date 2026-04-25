@@ -308,8 +308,19 @@ section { padding: var(--sp-7) 0; }
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 30% 30%, rgba(201, 162, 74, 0.35), transparent 50%),
-    radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.08), transparent 50%);
+    radial-gradient(circle at 30% 30%, rgba(201, 162, 74, 0.18), transparent 55%),
+    linear-gradient(180deg, transparent 50%, rgba(15, 28, 48, 0.45));
+  pointer-events: none;
+  z-index: 1;
+}
+.hero-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 25%;
+  z-index: 0;
 }
 .hero-card {
   position: absolute;
@@ -1424,10 +1435,4 @@ section { padding: var(--sp-7) 0; }
 
 .calc-disclaimer {
   margin-top: var(--sp-3);
-  padding: var(--sp-2) var(--sp-3);
-  background: var(--cream-100);
-  border-left: 3px solid var(--honey-500);
-  border-radius: var(--r-sm);
-  font-size: 0.88rem;
-  color: var(--ink-500);
-}
+  padding: var(--sp
