@@ -1233,21 +1233,45 @@ section { padding: var(--sp-7) 0; }
   background: var(--warm-white);
   border: 1px solid var(--line-soft);
   border-radius: var(--r-lg);
-  padding: var(--sp-4);
   box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+}
+.persona-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, var(--navy-700), var(--navy-900));
+  overflow: hidden;
+}
+.persona-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.persona-body {
+  padding: var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .persona-icon {
-  width: 60px;
-  height: 60px;
+  position: absolute;
+  bottom: -22px;
+  left: var(--sp-3);
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--honey-300), var(--honey-500));
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.8rem;
-  margin-bottom: var(--sp-2);
+  font-size: 1.6rem;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+  border: 3px solid var(--warm-white);
+  z-index: 2;
 }
 .persona-card h3 { font-size: 1.3rem; margin-bottom: 0.4rem; }
 .persona-card .persona-tag {
@@ -1416,23 +1440,4 @@ section { padding: var(--sp-7) 0; }
   margin-bottom: 0.4rem;
 }
 .calc-result .secondary {
-  color: rgba(251, 246, 238, 0.8);
-  font-size: 0.95rem;
-  margin-bottom: var(--sp-2);
-}
-.calc-result hr {
-  border: none;
-  border-top: 1px solid rgba(251, 246, 238, 0.18);
-  margin: var(--sp-2) 0;
-}
-.calc-result .breakdown { font-size: 0.95rem; color: rgba(251, 246, 238, 0.85); }
-.calc-result .breakdown div {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 0.4rem;
-}
-.calc-result .breakdown strong { color: var(--cream-50); }
-
-.calc-disclaimer {
-  margin-top: var(--sp-3);
-  padding: var(--sp
+  color: rgba(251, 246, 238, 0.8
