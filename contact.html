@@ -133,59 +133,97 @@
     <div class="section-head fade-in">
       <span class="eyebrow">Book directly</span>
       <h2>Pick a time that suits you</h2>
-      <p>If you'd rather skip the email and just lock in a chat, grab a slot directly.</p>
+      <p>Choose how you'd prefer to chat — both are free, no obligation, and last about as long as a coffee.</p>
     </div>
-    <div class="form-card" style="max-width: 820px; margin: 0 auto; padding: var(--sp-2);">
-      <!-- Calendly inline widget begin -->
-      <div class="calendly-inline-widget" data-url="https://calendly.com/arthur-artwealth/30min" style="min-width:320px;height:700px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-      <!-- Calendly inline widget end -->
-      <p style="text-align: center; color: var(--ink-500); margin-top: var(--sp-3); font-size: 0.92rem;">Can't see the calendar? <a href="https://calendly.com/arthur-artwealth/30min" target="_blank" rel="noopener">Open it in a new tab</a> or email <a href="mailto:arthur@artwealth.com.au?subject=Book%20a%20chat">arthur@artwealth.com.au</a>.</p>
+
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+
+    <style>
+      .booking-options {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--sp-3);
+        max-width: 880px;
+        margin: 0 auto;
+      }
+      .booking-card {
+        background: #fff;
+        border-radius: var(--r-md);
+        padding: var(--sp-4);
+        text-align: center;
+        box-shadow: 0 6px 24px rgba(31,58,95,0.06);
+        border: 1px solid rgba(31,58,95,0.08);
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .booking-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 32px rgba(31,58,95,0.10);
+      }
+      .booking-icon {
+        width: 64px;
+        height: 64px;
+        margin: 0 auto var(--sp-2);
+        background: var(--cream-100);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #1F3A5F;
+      }
+      .booking-card h3 {
+        margin: 0 0 0.4rem;
+        font-size: 1.35rem;
+      }
+      .booking-meta {
+        color: #B68C2E;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin: 0 0 var(--sp-2);
+        letter-spacing: 0.02em;
+      }
+      .booking-desc {
+        color: var(--ink-500);
+        margin: 0 0 var(--sp-3);
+        flex-grow: 1;
+      }
+      .booking-btn {
+        align-self: center;
+        margin-top: auto;
+      }
+      @media (max-width: 700px) {
+        .booking-options { grid-template-columns: 1fr; }
+      }
+    </style>
+
+    <div class="booking-options">
+      <article class="booking-card fade-in">
+        <div class="booking-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 10l4.553-2.276A1 1 0 0 1 21 8.618v6.764a1 1 0 0 1-1.447.894L15 14"/><rect x="3" y="6" width="12" height="12" rx="2" ry="2"/></svg>
+        </div>
+        <h3>Online meeting</h3>
+        <p class="booking-meta">45 min &middot; Microsoft Teams</p>
+        <p class="booking-desc">Best for first chats where it helps to share a screen, walk through documents, or look at numbers together.</p>
+        <button type="button" class="btn btn-primary booking-btn" onclick="Calendly.initPopupWidget({url:'https://calendly.com/arthur-artwealth/30min'});return false;">Pick a time →</button>
+      </article>
+
+      <article class="booking-card fade-in">
+        <div class="booking-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </div>
+        <h3>Phone call</h3>
+        <p class="booking-meta">30 min &middot; Arthur calls you</p>
+        <p class="booking-desc">Best if you'd prefer a no-screen, no-fuss call — perfect while walking the dog, on the commute, or grabbing a coffee.</p>
+        <button type="button" class="btn btn-primary booking-btn" onclick="Calendly.initPopupWidget({url:'https://calendly.com/arthur-artwealth/discovery-chat-phone-call'});return false;">Pick a time →</button>
+      </article>
     </div>
+
+    <p style="text-align: center; color: var(--ink-500); margin-top: var(--sp-4); font-size: 0.92rem;">Prefer email? Reach out at <a href="mailto:arthur@artwealth.com.au?subject=Book%20a%20chat">arthur@artwealth.com.au</a>.</p>
+
+    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
   </div>
 </section>
 
 <!-- ============ FOOTER ============ -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <a href="index.html" class="logo"><span class="mark">A</span><span>Art Wealth<small>Financial Advisory</small></span></a>
-        <p style="margin-top: var(--sp-2); color: rgba(251,246,238,0.65);">The art of protecting and growing your family's, individual's and business's wealth.</p>
-      </div>
-      <div><h4>Explore</h4><ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="process.html">How it works</a></li>
-        <li><a href="who-we-work-with.html">Who we help</a></li>
-        <li><a href="calculators.html">Calculators</a></li>
-        <li><a href="client-wins.html">Client wins</a></li>
-        <li><a href="reviews.html">Reviews</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul></div>
-      <div><h4>Get in touch</h4><ul>
-        <li><a href="mailto:arthur@artwealth.com.au">arthur@artwealth.com.au</a></li>
-        <li><a href="tel:0423047700">0423 047 700</a></li>
-        <li>Melbourne, VIC</li>
-        <li><a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a></li>
-      </ul></div>
-      <div><h4>Compliance</h4><ul>
-        <li><a href="docs/financial-services-guide.pdf">Financial Services Guide (FSG)</a></li>
-        <li><a href="docs/working-with-art-wealth.pdf">Working with Art Wealth (PDF)</a></li>
-        <li><a href="https://lifespanfp.com.au/privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a></li>
-      </ul></div>
-    </div>
-    <div class="disclosure">
-      <p>Arthur How (AR No. 1007694) and Art Wealth Management Pty Ltd (Corporate AR No. 1313420) are Authorised Representatives of <strong>Lifespan Financial Planning Pty Ltd</strong>, ABN 23 065 921 735, AFSL 229892. The information on this website is general in nature only and has been prepared without taking into account your particular financial needs, circumstances and objectives. You should consider your own circumstances and seek personal advice before making any financial decisions.</p>
-      <p>© <span id="year"></span> Art Wealth. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
-
-<script src="assets/js/main.js"></script>
-<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</body>
-</html>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+<footer class="sit
