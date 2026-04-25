@@ -135,22 +135,12 @@
       <h2>Pick a time that suits you</h2>
       <p>If you'd rather skip the email and just lock in a chat, grab a slot directly.</p>
     </div>
-    <div class="form-card" style="max-width: 820px; margin: 0 auto; min-height: 380px;">
-      <!--
-        REPLACE THIS BLOCK WITH YOUR BOOKING WIDGET
-        =============================================
-        Easiest options:
-          1. Calendly:        <div class="calendly-inline-widget" data-url="https://calendly.com/arthur-artwealth/intro" style="min-width:320px;height:700px;"></div>
-                              <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-          2. Wix Bookings:    Copy the embed code from your Wix Bookings dashboard (it'll be an <iframe>) and paste here.
-          3. HubSpot Meetings: <div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/your-link"></div>
-                              <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-      -->
-      <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--sp-5); text-align: center; background: var(--cream-100); border-radius: var(--r-md); min-height: 320px;">
-        <h3 style="font-size: 1.3rem;">Booking calendar goes here</h3>
-        <p style="color: var(--ink-500); max-width: 480px;">We'll embed your existing Wix Bookings widget (or move you to Calendly / HubSpot Meetings — see the migration guide for the easy steps).</p>
-        <a href="mailto:arthur@artwealth.com.au?subject=Book%20a%20chat" class="btn btn-primary mt-3">Email to book a time</a>
-      </div>
+    <div class="form-card" style="max-width: 820px; margin: 0 auto; padding: var(--sp-2);">
+      <!-- Calendly inline widget begin -->
+      <div class="calendly-inline-widget" data-url="https://calendly.com/arthur-artwealth/30min" style="min-width:320px;height:700px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+      <!-- Calendly inline widget end -->
+      <p style="text-align: center; color: var(--ink-500); margin-top: var(--sp-3); font-size: 0.92rem;">Can't see the calendar? <a href="https://calendly.com/arthur-artwealth/30min" target="_blank" rel="noopener">Open it in a new tab</a> or email <a href="mailto:arthur@artwealth.com.au?subject=Book%20a%20chat">arthur@artwealth.com.au</a>.</p>
     </div>
   </div>
 </section>
@@ -198,3 +188,4 @@
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
