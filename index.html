@@ -13,6 +13,103 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- ============ STRUCTURED DATA (JSON-LD) ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "FinancialService",
+        "@id": "https://www.artwealth.com.au/#business",
+        "name": "Art Wealth",
+        "alternateName": "Art Wealth Financial Advice",
+        "url": "https://www.artwealth.com.au/",
+        "logo": "https://www.artwealth.com.au/assets/images/android-chrome-512x512.png",
+        "image": "https://www.artwealth.com.au/assets/images/arthur-how.jpg",
+        "description": "Boutique Australian financial advice firm helping families, individuals and business owners with personal insurance, superannuation, retirement planning and investment strategies.",
+        "priceRange": "$$",
+        "telephone": "+61423047700",
+        "email": "arthur@artwealth.com.au",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Melbourne",
+          "addressRegion": "VIC",
+          "addressCountry": "AU"
+        },
+        "areaServed": {
+          "@type": "Country",
+          "name": "Australia"
+        },
+        "founder": {
+          "@id": "https://www.artwealth.com.au/#arthur"
+        },
+        "knowsAbout": [
+          "Personal insurance",
+          "Superannuation",
+          "Retirement planning",
+          "Wealth accumulation",
+          "Investment planning",
+          "SMSF strategies",
+          "Business owner financial planning",
+          "Transition to retirement",
+          "Salary sacrifice",
+          "Estate planning"
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/arthur-how-46ab5333/",
+          "https://www.adviserratings.com.au/adviser/1007694/Arthur-How"
+        ]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.artwealth.com.au/#arthur",
+        "name": "Arthur How",
+        "givenName": "Arthur",
+        "familyName": "How",
+        "jobTitle": "Certified Financial Planner",
+        "description": "Founder of Art Wealth. Certified Financial Planner (CFP®) with experience in financial advice since 2011 across major Australian banks and boutique advice firms.",
+        "image": "https://www.artwealth.com.au/assets/images/arthur-how.jpg",
+        "url": "https://www.artwealth.com.au/about.html",
+        "worksFor": {
+          "@id": "https://www.artwealth.com.au/#business"
+        },
+        "alumniOf": {
+          "@type": "CollegeOrUniversity",
+          "name": "Monash University"
+        },
+        "hasCredential": [
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Bachelor of Commerce (Accounting & Finance)"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Advanced Diploma of Financial Planning"
+          },
+          {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "Certified Financial Planner (CFP®)"
+          }
+        ],
+        "sameAs": [
+          "https://www.linkedin.com/in/arthur-how-46ab5333/",
+          "https://www.adviserratings.com.au/adviser/1007694/Arthur-How"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://www.artwealth.com.au/#website",
+        "url": "https://www.artwealth.com.au/",
+        "name": "Art Wealth",
+        "publisher": {
+          "@id": "https://www.artwealth.com.au/#business"
+        },
+        "inLanguage": "en-AU"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
 

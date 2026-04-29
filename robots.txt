@@ -1,0 +1,7 @@
+# robots.txt for artwealth.com.au
+# Allow all reputable crawlers full access. Sitemap below.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.artwealth.com.au/sitemap.xml
