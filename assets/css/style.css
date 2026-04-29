@@ -338,7 +338,30 @@ section { padding: var(--sp-7) 0; }
 
 @media (max-width: 880px) {
   .hero-grid { grid-template-columns: 1fr; }
-  .hero-visual { aspect-ratio: 16 / 11; max-width: 100%; }
+  /* On mobile, stack photo + card vertically — the absolute overlay doesn't work
+     because the narrow aspect ratio puts the card over Arthur's face. */
+  .hero-visual {
+    aspect-ratio: auto;
+    max-width: 100%;
+    position: relative;
+  }
+  .hero-photo {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    object-position: center 18%;
+    border-radius: var(--r-md);
+  }
+  .hero-card {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin: calc(var(--sp-3) * -1) var(--sp-3) 0;
+  }
 }
 
 /* =========================================================
@@ -1440,4 +1463,29 @@ section { padding: var(--sp-7) 0; }
   margin-bottom: 0.4rem;
 }
 .calc-result .secondary {
-  color: rgba(251, 246, 238, 0.8
+  color: rgba(251, 246, 238, 0.8);
+  font-size: 0.95rem;
+  margin-bottom: var(--sp-2);
+}
+.calc-result hr {
+  border: none;
+  border-top: 1px solid rgba(251, 246, 238, 0.18);
+  margin: var(--sp-2) 0;
+}
+.calc-result .breakdown { font-size: 0.95rem; color: rgba(251, 246, 238, 0.85); }
+.calc-result .breakdown div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+.calc-result .breakdown strong { color: var(--cream-50); }
+
+.calc-disclaimer {
+  margin-top: var(--sp-3);
+  padding: var(--sp-2) var(--sp-3);
+  background: var(--cream-100);
+  border-left: 3px solid var(--honey-500);
+  border-radius: var(--r-sm);
+  font-size: 0.88rem;
+  color: var(--ink-500);
+}
