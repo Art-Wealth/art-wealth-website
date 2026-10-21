@@ -20,8 +20,9 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# PDFs cached for a day
+# PDFs: browsers must check for a newer version each time, so updated
+# disclosure documents (FSG, Adviser Profile) show immediately
 [[headers]]
   for = "/docs/*"
   [headers.values]
-    Cache-Control = "public, max-age=86400"
+    Cache-Control = "public, max-age=0, must-revalidate"
